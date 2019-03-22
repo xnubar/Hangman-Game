@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hangman Game</title>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./assets/images/favico.png" />
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-img">
+            HANGMAN
+        </div>
+        <div class="row">
+            <h6 id="correct-answer"></h6>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 columns">
+                <img src="" alt="" id="correct-answer-img">
+            </div>
+            <div class="col-lg-6 col-md-6 col sm-12 col-xs-12 columns">
+                <div class="gameboard">
+
+                    <h4 class="gameboard-title">PRESS ANY KEY TO GET STARTED</h4>
+                    <hr>
+                    <h6>Wins:&nbsp;<span id="wins">0</span></h6>
+                    <h6>Current word</h6>
+                    <h6 id="current-word"></h6>
+                    <h6>Number of guesses remaining:&nbsp;<span id="remaining-guesses">13</span></h6>
+                    <h6>Letters already guessed: <span id="guessed-letters"></span></h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/javascript/script.js"></script>
+</body>
+
+</html>

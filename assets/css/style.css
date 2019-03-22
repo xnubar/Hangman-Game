@@ -1,0 +1,58 @@
+body {
+    background: black;
+    line-height: 1.5em;
+    height: 150vh;
+}
+
+.columns {
+    border: 2px dashed #fff;
+    height: 500px;
+    text-align: center;
+    padding: 30px;
+}
+
+.header-img {
+    font-family: 'Pacifico', cursive;
+    color:pink;
+    font-size:90px;
+    text-align: center;
+    margin:100px 0;
+    font-weight: bold;
+}
+
+#correct-answer {
+    margin: 25px auto;
+    font-size: 35px;
+}
+#correct-answer-img {
+    width: 350px;
+    height: 200px;
+}
+
+.columns .gameboard {
+    padding: 20px;
+    text-align: center;
+}
+
+.columns .gameboard .gameboard-title,h6 {
+    margin-top: 10px;
+    color:#fff;
+    font-size: 24px;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+
+}
+
+.columns .gameboard .gameboard-title:hover {
+    font-size: 30px;
+    color:pink;
+}
+
+hr {
+    border: 0;
+    height: 0; /* Firefox... */
+    box-shadow: 0 0 10px 1px #fff;
+}
+hr:after {  /* Not really supposed to work, but does */
+    content: "\00a0";  /* Prevent margin collapse */
+}

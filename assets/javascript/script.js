@@ -78,15 +78,17 @@ window.onkeydown = function (event) {
         if (word === wordWithUnderscore.toString().split(",").join("")) {
             wins.innerHTML = parseInt(wins.innerHTML) + 1;
             correctAnswer.innerHTML = word.toUpperCase();
-            var img=document.getElementById("correct-answer-img");
-            if(img!=null){
-                img.attr("src","./assets/images/"+word+".png");
-            }else{
-                img=document.createElement(" <img src="+"./assets/images/"+word+".png"+"id="+"correct-answer-img"+">")
-                correctAnswerImg.appendChild(img);
+            var answerImg = document.getElementById("correct-answer-img");
+            if (answerImg != null) {
+                answerImg.attr("src", "./assets/images/" + word + ".png");
+            } else {
+                answerImg = document.createElement("img")
+                answerImg.className = "correct-answer-img";
+                answerImg.src = "./assets/images/" + word + ".png";
+                answerImg.style.width = "350px";
+                answerImg.style.height = "200px";
+                correctAnswerImg.appendChild(answerImg);
             }
-          
-            
             if (audio != undefined) {
                 audio.pause();
             }

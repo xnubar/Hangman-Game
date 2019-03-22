@@ -24,11 +24,6 @@ body {
     margin: 25px auto;
     font-size: 35px;
 }
-#correct-answer-img {
-    width: 350px;
-    height: 200px;
-    border:none;
-}
 
 .columns .gameboard {
     padding: 20px;

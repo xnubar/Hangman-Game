@@ -5,7 +5,7 @@ var remainingGuesses = document.getElementById("remaining-guesses")
 var guessedLetters = document.getElementById("guessed-letters")
 var wins = document.getElementById("wins");
 var correctAnswer = document.getElementById("correct-answer");
-var correctAnswerImg = document.getElementById("correct-answer-img");
+var correctAnswerImg = document.getElementById("columns-img");
 var word = "";
 var wordWithUnderscore = [];
 var isGuessed;
@@ -70,7 +70,7 @@ function wrongGuessesLetters(letter) {
 }
 
 reStart();
-window.onkeypress = function (event) {
+window.onkeydown = function (event) {
     console.log(word)
     if (parseInt(remainingGuesses.innerHTML) > 0 && parseInt(remainingGuesses.innerHTML) <= 13) {
         userGuess = String.fromCharCode(event.keyCode).toLowerCase();
@@ -78,7 +78,15 @@ window.onkeypress = function (event) {
         if (word === wordWithUnderscore.toString().split(",").join("")) {
             wins.innerHTML = parseInt(wins.innerHTML) + 1;
             correctAnswer.innerHTML = word.toUpperCase();
-            correctAnswerImg.src = "./assets/images/" + word + ".png";
+            var img=document.getElementById("correct-answer-img");
+            if(img!=null){
+                img.attr("src","./assets/images/"+word+".png");
+            }else{
+                img=document.createElement(" <img src="+"./assets/images/"+word+".png"+"id="+"correct-answer-img"+">")
+                correctAnswerImg.appendChild(img);
+            }
+          
+            
             if (audio != undefined) {
                 audio.pause();
             }

@@ -27,6 +27,7 @@ body {
 #correct-answer-img {
     width: 350px;
     height: 200px;
+    border:none;
 }
 
 .columns .gameboard {

@@ -25,6 +25,11 @@ body {
     font-size: 35px;
 }
 
+#correct-answer-img {
+    width: 350px;
+    height: 200px;
+}
+
 .columns .gameboard {
     padding: 20px;
     text-align: center;

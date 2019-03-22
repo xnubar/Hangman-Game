@@ -70,7 +70,7 @@ function wrongGuessesLetters(letter) {
 }
 
 reStart();
-window.onkeydown = function (event) {
+window.onkeypress = function (event) {
     console.log(word)
     if (parseInt(remainingGuesses.innerHTML) > 0 && parseInt(remainingGuesses.innerHTML) <= 13) {
         userGuess = String.fromCharCode(event.keyCode).toLowerCase();
@@ -80,15 +80,13 @@ window.onkeydown = function (event) {
             correctAnswer.innerHTML = word.toUpperCase();
             var answerImg = document.getElementById("correct-answer-img");
             if (answerImg != null) {
-                answerImg.attr("src", "./assets/images/" + word + ".png");
-            } else {
-                answerImg = document.createElement("img")
-                answerImg.className = "correct-answer-img";
-                answerImg.src = "./assets/images/" + word + ".png";
-                answerImg.style.width = "350px";
-                answerImg.style.height = "200px";
-                correctAnswerImg.appendChild(answerImg);
+                correctAnswerImg.removeChild(answerImg);
             }
+            answerImg = document.createElement("img")
+            answerImg.setAttribute("id", "correct-answer-img");
+            answerImg.src = "./assets/images/" + word + ".png";
+            correctAnswerImg.appendChild(answerImg);
+
             if (audio != undefined) {
                 audio.pause();
             }
